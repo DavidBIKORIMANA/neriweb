@@ -11,7 +11,7 @@ if (!isset($_SESSION['admin_logged_in'])) {
 $host = 'localhost';
 $dbname = 'philippeneri';
 $username = 'root';
-$password = 'HDLPOahfVpYlhx29SkgMJCsmCMAYj0HL";
+$password = 'HDLPOahfVpYlhx29SkgMJCsmCMAYj0HL'; // <-- FIXED
 $pdo = null; // Initialize PDO object
 
 try {
@@ -20,15 +20,11 @@ try {
     $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false); // Recommended for security
 
 } catch (PDOException $e) {
-    // If a database connection fails, display an error message
     $error_message = "Database connection failed: " . $e->getMessage();
 }
 
-// Stats array is not needed anymore
 $stats = [];
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -525,12 +521,12 @@ $stats = [];
                 <li><a href="view_applications.php"><i class="fas fa-file-invoice"></i> <span>All Applications</span></a></li>
                 <li><a href="manage_news.php"><i class="fas fa-newspaper"></i> <span>Manage News</span></a></li>
                 
-                <li><a href="admin_overview.php"><i class="school_background"></i> <span>update school background</span></a></li>
+               
                 <li><a href="manage_academics.php"><i class="fas fa-book-open"></i> <span>Manage Academics</span></a></li>
                 <li><a href="manage_announcement.php"><i class="fas fa-bullhorn"></i> <span>Manage Announcements</span></a></li>
                 <li><a href="manage_holiday.php"><i class="fas fa-calendar-alt"></i> <span>Manage Holidays</span></a></li>
-                <li><a href="register_teacher.php"><i class="fas fa-chalkboard-teacher"></i> <span>Manage Teachers</span></a></li>
-                <li><a href="assign_class.php"><i class="fas fa-user-graduate"></i> <span>Assign Class</span></a></li>
+               
+                 <li><a href="admin_overview.php"><i class="school_background"></i> <span>update school background</span></a></li>
                 <li><a href="admin_settings.php"><i class="fas fa-cogs"></i> <span>Settings</span></a></li>
             </ul>
         </nav>

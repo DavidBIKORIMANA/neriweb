@@ -4,7 +4,7 @@ session_start();
 
 // Only admin can access this page
 if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
-    header("Location: teacher_login.php");
+    header("Location:login.php");
     exit();
 }
 

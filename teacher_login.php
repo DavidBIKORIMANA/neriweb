@@ -6,7 +6,7 @@ session_start();
 $host = 'localhost';
 $dbname = 'philippeneri';
 $username_db = 'root'; // Renamed to avoid conflict with loginUsername
-$password_db = '';     // Renamed to avoid conflict with loginPassword
+$password_db = 'HDLPOahfVpYlhx29SkgMJCsmCMAYj0HL';     // Renamed to avoid conflict with loginPassword
 
 // Initialize error message
 $error = '';
